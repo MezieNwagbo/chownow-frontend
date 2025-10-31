@@ -1,11 +1,11 @@
-🥗 ##ChowNow Frontend
+🥗 ## ChowNow Frontend
 
 The ChowNow Frontend is a modern, high-performance web interface for the ChowNow food ordering platform.
 It enables users to browse restaurants, explore menus, manage accounts, and place orders — all through a seamless, responsive, and accessible UI.
 
 Built with React 19, Vite, and Tailwind CSS, this frontend delivers a fast, modern user experience integrated with the ChowNow Backend.
 
-🚀 ##Tech Stack
+🚀 ## Tech Stack
 
 Core Frameworks
 
@@ -31,7 +31,7 @@ Sonner for toasts/notifications
 
 React Router v7 for routing
 
-📂 ##Project Structure
+📂 ## Project Structure
 frontend/
 ├── src/
 │   ├── assets/            # Static assets
@@ -48,7 +48,7 @@ frontend/
 ├── tailwind.config.js
 └── tsconfig.json
 
-⚙️ ##Setup Instructions
+⚙️ ## Setup Instructions
 1. Clone the repository
 git clone https://github.com/<your-username>/chownow.git
 cd chownow/frontend
@@ -71,7 +71,7 @@ npm run dev
 
 Access the app at http://localhost:5173
 
-🧩 ##Available Scripts
+🧩 ## Available Scripts
 Command	Description
 npm run dev	Start the development server
 npm run build	Build for production
@@ -91,7 +91,7 @@ npm run lint	Run ESLint on the codebase
 
 ⚡ Optimized State Management — via React Query and hooks
 
-🧱 ##Integration with Backend
+🧱 ## Integration with Backend
 
 The frontend interacts with the ChowNow Backend
  via REST APIs for:
@@ -104,6 +104,6 @@ Order creation and management
 
 Image retrieval from Cloudinary
 
-🧾 ##License
+🧾 ## License
 
 This project is licensed under the ISC License.
