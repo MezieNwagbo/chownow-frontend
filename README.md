@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+🥗 ChowNow Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The ChowNow Frontend is a modern, high-performance web interface for the ChowNow food ordering platform.
+It enables users to browse restaurants, explore menus, manage accounts, and place orders — all through a seamless, responsive, and accessible UI.
 
-Currently, two official plugins are available:
+Built with React 19, Vite, and Tailwind CSS, this frontend delivers a fast, modern user experience integrated with the ChowNow Backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Tech Stack
 
-## Expanding the ESLint configuration
+Core Frameworks
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+React 19
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Vite 7
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+TypeScript 5
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Tailwind CSS 4
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Libraries & Tools
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Auth0 for authentication (@auth0/auth0-react)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+React Query for server state management
+
+React Hook Form + Zod for form validation
+
+Radix UI + Lucide Icons for accessible UI components
+
+Sonner for toasts/notifications
+
+React Router v7 for routing
+
+📂 Project Structure
+frontend/
+├── src/
+│   ├── assets/            # Static assets
+│   ├── components/        # Reusable UI components
+│   ├── features/          # Feature-specific components (e.g., menu, cart)
+│   ├── hooks/             # Custom hooks
+│   ├── layouts/           # Page layouts
+│   ├── pages/             # Route pages (Home, Restaurant, Cart, etc.)
+│   ├── providers/         # QueryClientProvider, ThemeProvider, etc.
+│   ├── utils/             # Helper functions
+│   └── main.tsx           # App entry point
+├── index.html
+├── package.json
+├── tailwind.config.js
+└── tsconfig.json
+
+⚙️ Setup Instructions
+1. Clone the repository
+git clone https://github.com/<your-username>/chownow.git
+cd chownow/frontend
+
+2. Install dependencies
+npm install
+
+3. Environment Variables
+
+Create a .env file in the frontend/ root:
+
+VITE_API_URL=http://localhost:5000        # Backend API base URL
+VITE_AUTH0_DOMAIN=your-auth0-domain
+VITE_AUTH0_CLIENT_ID=your-auth0-client-id
+VITE_AUTH0_AUDIENCE=your-auth0-audience
+
+4. Start the development server
+npm run dev
+
+
+Access the app at http://localhost:5173
+
+🧩 Available Scripts
+Command	Description
+npm run dev	Start the development server
+npm run build	Build for production
+npm run preview	Preview production build locally
+npm run lint	Run ESLint on the codebase
+🧠 Features
+
+🔐 Auth0 Authentication — Secure login & signup
+
+🏪 Restaurant Listing — Browse restaurants & menus
+
+🛒 Cart & Checkout — Add meals and place orders
+
+💳 Payment Ready — Designed for Stripe integration
+
+🎨 Modern UI — Built with Radix, Tailwind, and Lucide Icons
+
+⚡ Optimized State Management — via React Query and hooks
+
+🧱 Integration with Backend
+
+The frontend interacts with the ChowNow Backend
+ via REST APIs for:
+
+User authentication (JWT or Auth0 tokens)
+
+Menu and restaurant data
+
+Order creation and management
+
+Image retrieval from Cloudinary
+
+🧾 License
+
+This project is licensed under the ISC License.
